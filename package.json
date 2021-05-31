@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "kkb_node",
   "main": "index.js",
+  "bin": {
+    "cli-test": "./01-cli/commander.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cli-test",
+    "start": "node ./01-cli/package.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,13 @@
   },
   "homepage": "https://github.com/feigehenmang/kkb_node#readme",
   "devDependencies": {
+    "commander": "^7.2.0",
     "download-git-repo": "^3.0.2"
+  },
+  "config": {
+    "port": 8080
+  },
+  "dependencies": {
+    "shelljs": "^0.8.4"
   }
 }
